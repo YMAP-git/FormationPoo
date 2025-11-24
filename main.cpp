@@ -5,9 +5,7 @@ using namespace std;
 
 int main()
 {
-    Personnage david, goliath;
-    //Création de 2 objets de type Personnage : david et goliath
-
+    Personnage david, goliath("Epée aiguisée",20);
     goliath.attaquer(david); //goliath attaque david
     david.boirePotionDeVie(20); //david récupère 20 de vie en buvant une potion
     goliath.attaquer(david); //goliath attaque david
