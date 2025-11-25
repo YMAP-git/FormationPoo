@@ -26,7 +26,7 @@ Personnage::~Personnage()
     /* Rien à mettre ici car on ne fait pas d'allocation dynamique
     dans la classe Personnage. Le destructeur est donc inutile mais
     je le mets pour montrer à quoi cela ressemble.
-    
+
     En temps normal, un destructeur fait souvent des delete et quelques
     autres vérifications si nécessaire avant la destruction de l'objet. */
 }
@@ -64,7 +64,7 @@ void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
     m_degatsArme = degatsNouvelleArme;
 }
 
-bool Personnage::estVivant()
+bool Personnage::estVivant() const
 {
     return m_vie > 0;
 }

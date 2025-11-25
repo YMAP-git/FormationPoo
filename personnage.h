@@ -14,7 +14,7 @@ class Personnage
     void attaquer(Personnage &cible);
     void boirePotionDeVie(int quantitePotion);
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
-    bool estVivant();
+    bool estVivant() const;
 
     private:
 
