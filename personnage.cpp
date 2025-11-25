@@ -21,6 +21,15 @@ Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100)
 Personnage::Personnage(Personnage const& autre): m_vie(autre.m_vie), m_mana(autre.m_mana), m_nomArme(autre.m_nomArme), m_degatsArme(autre.m_degatsArme)
 {
 }
+Personnage::~Personnage()
+{
+    /* Rien à mettre ici car on ne fait pas d'allocation dynamique
+    dans la classe Personnage. Le destructeur est donc inutile mais
+    je le mets pour montrer à quoi cela ressemble.
+    
+    En temps normal, un destructeur fait souvent des delete et quelques
+    autres vérifications si nécessaire avant la destruction de l'objet. */
+}
 
 void Personnage::recevoirDegats(int nbDegats)
 {

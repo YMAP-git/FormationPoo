@@ -9,6 +9,7 @@ class Personnage
     Personnage(); //constructeur
     Personnage(std::string nomArme, int degatsArme); //Surcharge du constructeur
     Personnage(Personnage const& autre);
+    ~Personnage(); //destructeur
     void recevoirDegats(int nbDegats);
     void attaquer(Personnage &cible);
     void boirePotionDeVie(int quantitePotion);
