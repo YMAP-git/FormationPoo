@@ -18,6 +18,10 @@ Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100)
  
 }
 
+Personnage::Personnage(Personnage const& autre): m_vie(autre.m_vie), m_mana(autre.m_mana), m_nomArme(autre.m_nomArme), m_degatsArme(autre.m_degatsArme)
+{
+}
+
 void Personnage::recevoirDegats(int nbDegats)
 {
     m_vie -= nbDegats;

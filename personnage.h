@@ -8,6 +8,7 @@ class Personnage
     public:
     Personnage(); //constructeur
     Personnage(std::string nomArme, int degatsArme); //Surcharge du constructeur
+    Personnage(Personnage const& autre);
     void recevoirDegats(int nbDegats);
     void attaquer(Personnage &cible);
     void boirePotionDeVie(int quantitePotion);
