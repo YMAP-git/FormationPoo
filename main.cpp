@@ -1,5 +1,6 @@
 #include <iostream>
 #include "personnage.h" //Ne pas oublier
+#include "arme.h"
 
 using namespace std;
 

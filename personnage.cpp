@@ -58,6 +58,10 @@ void Personnage::boirePotionDeVie(int quantitePotion)
         m_vie = 100;
     }
 }
+void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
+{
+    m_arme.changer(nomNouvelleArme, degatsNouvelleArme);
+}
 
 bool Personnage::estVivant() const
 {

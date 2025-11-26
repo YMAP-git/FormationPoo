@@ -10,7 +10,7 @@ class Arme
  
     Arme();
     Arme(std::string nom, int degats);
-    void changerArme(std::string nom, int degats);
+    void changer(std::string nom, int degats);
     void afficher() const;
     int getDegats() const;
     private:
