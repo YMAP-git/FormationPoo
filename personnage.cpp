@@ -9,17 +9,18 @@ using namespace std;
 //     m_nomArme = "Epee rouillee";
 //     m_degatsArme = 10;
 // }
-Personnage::Personnage() : m_vie(100), m_mana(100), m_nomArme("Epee rouillee"), m_degatsArme(10)
+Personnage::Personnage() : m_vie(100), m_mana(100), m_arme("Epee rouillee", 10)
 {
     //Rien à mettre dans le corps du constructeur, tout a déjà été fait !
 }
-Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100),m_nomArme(nomArme), m_degatsArme(degatsArme)
+Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100), m_arme(nomArme, degatsArme)
 {
  
 }
 
-Personnage::Personnage(Personnage const& autre): m_vie(autre.m_vie), m_mana(autre.m_mana), m_nomArme(autre.m_nomArme), m_degatsArme(autre.m_degatsArme)
+Personnage::Personnage(Personnage const& autre) : m_vie(autre.m_vie), m_mana(autre.m_mana), m_arme(autre.m_arme)
 {
+    //Rien à mettre dans le corps du constructeur, tout a déjà été fait !
 }
 Personnage::~Personnage()
 {
@@ -44,7 +45,7 @@ void Personnage::recevoirDegats(int nbDegats)
 
 void Personnage::attaquer(Personnage &cible)
 {
-    cible.recevoirDegats(m_degatsArme);
+    cible.recevoirDegats(m_arme.getDegats());
     //On inflige à la cible les dégâts que cause notre arme
 }
 
@@ -58,13 +59,13 @@ void Personnage::boirePotionDeVie(int quantitePotion)
     }
 }
 
-void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
-{
-    m_nomArme = nomNouvelleArme;
-    m_degatsArme = degatsNouvelleArme;
-}
-
 bool Personnage::estVivant() const
 {
     return m_vie > 0;
+}
+void Personnage::afficherEtat() const
+{
+    cout << "Vie : " << m_vie << endl;
+    cout << "Mana : " << m_mana << endl;
+    m_arme.afficher();
 }

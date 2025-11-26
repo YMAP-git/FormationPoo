@@ -2,12 +2,12 @@
 #define DEF_PERSONNAGE
 
 #include <string>
-
+#include  "arme.h"
 class Personnage
 {
     public:
     Personnage(); //constructeur
-    Personnage(std::string nomArme, int degatsArme); //Surcharge du constructeur
+    Personnage(std::string nomArme, int degatsArme);
     Personnage(Personnage const& autre);
     ~Personnage(); //destructeur
     void recevoirDegats(int nbDegats);
@@ -15,13 +15,13 @@ class Personnage
     void boirePotionDeVie(int quantitePotion);
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
     bool estVivant() const;
+    void afficherEtat() const;
 
     private:
 
     int m_vie;
     int m_mana;
-    std::string m_nomArme; //Pas de using namespace std, il faut donc mettre std:: devant string
-    int m_degatsArme;
+    Arme m_arme;
 };
 
 #endif
