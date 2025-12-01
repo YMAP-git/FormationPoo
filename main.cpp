@@ -30,7 +30,7 @@ int main()
 
     goliath.afficherEtat();
 
-    Duree duree1(0, 10, 28), duree2(0, 15, 2);
+    Duree duree1(0, 40, 28), duree2(0, 55, 45);
     cout <<"Duree 1 : ";
     duree1.afficher();
     cout <<"Duree 2 : ";
