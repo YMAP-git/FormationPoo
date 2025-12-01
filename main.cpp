@@ -1,7 +1,7 @@
 #include <iostream>
 #include "personnage.h" //Ne pas oublier
 #include "arme.h"
-#include "duree.h"
+
 
 
 using namespace std;
@@ -31,7 +31,6 @@ int main()
     goliath.afficherEtat();
 
 
-    Duree duree1(0, 10, 28), duree2(0, 15, 2);
 
  
 
