@@ -38,9 +38,9 @@ int main()
     cout <<"Somme des deux durees : ";
     Duree somme = duree1 + duree2;
     somme.afficher();
-
-
-
-
+    if (duree1 == duree2)
+        cout << "Les deux durees sont egales." << endl;
+    else
+        cout << "Les deux durees sont differentes." << endl;
     return 0;
 }

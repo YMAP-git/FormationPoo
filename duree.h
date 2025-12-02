@@ -11,6 +11,7 @@ class Duree
     int getSecondes() const;
     void afficher() const;
     Duree operator+(const Duree& autre) const;
+    bool operator==(const Duree& autre) const;
  
     private:
     int m_heures;

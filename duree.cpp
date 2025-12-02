@@ -40,3 +40,7 @@ Duree Duree::operator+(const Duree& autre) const{
     }
     return Duree(totalHeures, totalMinutes, totalSecondes);
 }
+//Vérifier que 2 objets de type Duree sont égaux
+bool Duree::operator==(const Duree& autre) const{
+    return (m_heures == autre.m_heures) && (m_minutes == autre.m_minutes) && (m_secondes == autre.m_secondes);
+}
