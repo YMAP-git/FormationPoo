@@ -23,21 +23,11 @@ int Duree::getSecondes() const { return m_secondes; }
 void Duree::afficher() const{
     std::cout << m_heures << " heures, " << m_minutes << " minutes et " << m_secondes << " secondes." << std::endl;
 }
+//Additionner 2 objets de type Duree
 Duree Duree::operator+(const Duree& autre) const{
     int totalSecondes = m_secondes + autre.m_secondes;
     int totalMinutes = m_minutes + autre.m_minutes;
     int totalHeures = m_heures + autre.m_heures;
-
-    if (totalSecondes >= 60)
-    {
-        totalMinutes += totalSecondes / 60;
-        totalSecondes = totalSecondes % 60;
-    }
-    if (totalMinutes >= 60)
-    {
-        totalHeures += totalMinutes / 60;
-        totalMinutes = totalMinutes % 60;
-    }
     return Duree(totalHeures, totalMinutes, totalSecondes);
 }
 //Vérifier que 2 objets de type Duree sont égaux
