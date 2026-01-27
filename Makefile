@@ -1,7 +1,7 @@
 #Lister les noms des différents fichiers à compiler
 
 
-SRC_FILES	= auteur.cpp date.cpp lecteur.cpp main.cpp livre.cpp
+SRC_FILES	= main.cpp duree.cpp arme.cpp personnage.cpp
 
 #Création du nom de l'exécutable APP
 APP			= app

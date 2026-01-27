@@ -6,7 +6,7 @@
 class Personnage
 {
     public:
-    Personnage(); //constructeur
+    Personnage(); //constructeur par défaut
     Personnage(std::string nomArme, int degatsArme);
     Personnage(Personnage const& autre);
     ~Personnage(); //destructeur
@@ -21,7 +21,7 @@ class Personnage
 
     int m_vie;
     int m_mana;
-    Arme m_arme;
+    Arme *m_arme;
 };
 
 #endif
